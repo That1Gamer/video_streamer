@@ -1,0 +1,156 @@
+
+.image_div {
+    background-image: url('/staticFiles/assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow:scroll;
+}
+.image_divs {
+    background-image: url('/staticFiles/assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:100vh;
+    left:0;
+    right:0;
+    overflow: hidden;
+    overflow-x:hidden;
+    overflow-y:hidden;
+   width:100vw;
+}
+.heading{
+    color: #fff;
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
+}
+.heading2{
+    color: #fff;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 1px;
+}
+.camera_ID {
+    position: absolute;
+    color: #f00;
+    width: 100vw;
+    padding-right: 36rem;
+    padding-top: 5px;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.buttons {
+    margin-bottom:30px;
+    margin-top:15px;
+}
+
+.record {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.description_div {
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+   
+}
+.descriptions {
+    text-align: center;
+    width: 440px;
+    height: 200px;
+    border: 2px solid #ccc;
+    color: #fff;
+    background-color: #1a2023;
+    overflow: auto;
+}
+.image {
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 4px rgb(194, 194, 200);
+}
+img{
+    width: 720px;
+
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    padding-top: 30rem;
+    
+}
+.passwords {
+    margin-bottom: 10px;
+    margin-top: 10px;
+   
+}
+input {
+    
+    
+    border-radius: 20px;
+    padding: 6px 5px;
+    outline-style: none;
+    outline-width:0;
+}
+.record{
+    color:red;
+}
+
+@media screen and (max-width: 480px) {
+
+    .heading {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    .cards{
+        padding-top: 15rem;
+
+    }
+    img {
+      width: 300px;
+    }
+    .camera_ID {
+        padding-right: 18rem;
+        width: 130vw;
+        font-size: 10px;
+    }
+    .heading2 {
+        padding-top: 0rem;
+    }
+    .buttons {
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+    .descriptions {
+        text-align: center;
+        width: 620px;
+        height: 200px;
+        margin-right: 16px;
+        margin-left: 16px;
+        padding: 5px 5px;
+        text-align: justify-all;
+        font-size: 11px;
+    }
+    .image_div {
+        overflow-x: hidden;
+    }
+  }
+
+
+  @media screen and (max-width: 1480px) {
+    .heading{
+        color: #fff;
+        padding-top: 5rem;
+    }
+  }

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="image_divs text-center">
+
+    <div class="w-100 cards">
+    <div class="card">
+        <h5 class="card-header bg-secondary text-white">Login</h5>
+        <div class="card-body">
+            <form action="" method="post">
+                <input class=" w-100" type="text" placeholder="Username" name="username" value="{{request.form.username }}">
+                <input class=" w-100 passwords" type="password" placeholder="Password" name="password" value="{{request.form.password }}">
+                <input class=" w-100 bg-info text-white" type="submit" value="Login">
+
+                <!-- errors -->
+                {% if error %}
+                <p class="card-body"><strong>Error:</strong> {{ error }}</p>
+                {% endif %}
+
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+
+    {% endblock %}

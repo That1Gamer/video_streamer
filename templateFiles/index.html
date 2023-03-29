@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="image_div text-center">
+
+    <h2 class="heading" title="Header tooltip"> Remote Camera Capturing</h2>
+    <h3 class="heading2" title="Header tooltip"> Live Cameras</h3>
+
+    {% if rec_state == "True"%}
+    <p class="camera_ID ">Recording: Active </p>
+    {% else %}
+    <p class="camera_ID ">Recording: Inactive</p>
+    {% endif %}
+
+    <img class="image rounded" src="{{ url_for('video_feed') }}">
+
+    <form method="post" action="/index">
+
+        {% if rec_state == "True" %}
+        <button class="text-black small buttons" type="submit" disabled value="VALUE1" name="action1">  <i class="record fa  fa-regular fa-video" style="font-size:30px;"></i></button>
+        {% else %}
+        <button class="text-black small buttons" type="submit" value="VALUE1" name="action1">  <i class="fa fa-regular fa-video" style="font-size:30px;color:red"></i></button>
+        {% endif %}
+
+        <button class="text-black small buttons" type="submit" value="VALUE2" name="action2"> <i class=" fa fa-thin fa-stop" style="font-size:30px;color:dimgrey;"></i></button>
+        <button class="text-black small buttons" type="submit" formaction="{{ url_for('download') }}"><i class="fa fa-duotone fa-download" style="font-size:30px;"></i></button>
+        <button class="text-black small buttons" type="submit" formaction="{{ url_for('index') }}"><i class="fa fa-thin fa-display" style="font-size:30px;"></i></button>
+        <button class="text-black small buttons" type="submit" formaction="{{ url_for('output_logs') }}"><i class="fa fa-solid fa-file-lines" style="font-size:30px;"></i></button>
+        <button class="text-black small buttons" type="submit" formaction="{{ url_for('logout') }}"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket" style="font-size:30px;"></i> </button>
+        <div class="description_div">
+            <p class="descriptions"> {{ output_log }} </p>
+        </div>
+    </form>
+
+</div>
+
+
+{% endblock %}
